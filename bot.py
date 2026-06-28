@@ -41,7 +41,7 @@ _pool = ThreadPoolExecutor(max_workers=8)
 TEAM_NAME = os.getenv("TEAM_NAME", "Team Vera")
 TEAM_MEMBERS = [m for m in os.getenv("TEAM_MEMBERS", "Chelsi").split(",") if m]
 CONTACT_EMAIL = os.getenv("CONTACT_EMAIL", "chelsisinghal1362@gmail.com")
-MODEL = os.getenv("COMPOSER_MODEL", "claude-sonnet-4-6")
+MODEL = os.getenv("COMPOSER_MODEL", "rule-based template composer")
 TICK_BUDGET_SECONDS = float(os.getenv("TICK_BUDGET_SECONDS", "20"))
 MAX_ACTIONS_PER_TICK = 20
 
@@ -68,9 +68,10 @@ def metadata():
         "team_name": TEAM_NAME,
         "team_members": TEAM_MEMBERS,
         "model": MODEL,
-        "approach": "Per-trigger-kind composer (Claude with a rubric-aligned prompt, "
-                    "deterministic template fallback) over a versioned 4-context store; "
-                    "intent-classified reply router for auto-reply/intent/opt-out handling.",
+        "approach": "Per-trigger-kind rule-based composer over a versioned 4-context "
+                    "store; pulls verifiable facts from the contexts into category-correct "
+                    "message templates; intent-classified reply router for "
+                    "auto-reply / intent / opt-out handling.",
         "contact_email": CONTACT_EMAIL,
         "version": "1.0.0",
         "submitted_at": _now_iso(),
