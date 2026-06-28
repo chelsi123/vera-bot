@@ -18,6 +18,7 @@ from concurrent.futures import ThreadPoolExecutor, TimeoutError as FuturesTimeou
 from datetime import datetime, timezone
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
@@ -26,6 +27,13 @@ from composer import compose
 from conversation import handle_reply
 
 app = FastAPI(title="Vera Challenge Bot")
+# Allow the interactive playground page (and any browser tool) to call the bot.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 START = time.time()
 store = Store()
 _pool = ThreadPoolExecutor(max_workers=8)

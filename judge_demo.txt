@@ -1,0 +1,9 @@
+========== WHAT THE JUDGE RECEIVES ==========
+
+STEP 2 - Bot composed this message (the judge scores this):
+  TO: m_001_drmeera_dentist_delhi
+  MESSAGE: Dr. Meera, this week's digest landed. 2,100-patient trial: 3-month fluoride varnish recall outperforms 6-month for high-risk adult caries. Relevant to your high risk adults cohort. Worth a 2-min look. Want me to pull the abstract + draft a patient-ed WhatsApp you can reshare? — JIDA Oct 2026, p.14
+  WHY (bot explains itself): External research digest with a clinical anchor + source citation; low-friction reciprocity CTA (I'll draft it for you).
+
+STEP 3 - Judge (pretending to be the dentist) replied: "Yes please send me the abstract"
+  Bot answered: On it — drafting your message now and pre-filling the Google post for tomorrow 10am. Reply CONFIRM to publish + send to your list (124 customers), or CANCEL to review first.
